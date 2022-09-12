@@ -57,7 +57,7 @@ const streaming = (request, response, file, contentType) => {
     const { start, end, total } = getRange(request, stats);
 
     respond(request, response, contentType, start, end, total);
-    
+
     return getStream(request, response, file, start, end);
   });
 };
